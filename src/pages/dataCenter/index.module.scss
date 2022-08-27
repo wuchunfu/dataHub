@@ -1,6 +1,7 @@
 .container{
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
     position: relative;
     display: grid;
     grid-template-columns: max-content 1fr;
@@ -24,24 +25,26 @@
     }
     aside{
         border-right: 1px solid #e9e9f1;
-        height: 100%;
+        height: auto;
     }
     main{
-        height: 100%;
-        overflow: hidden;
+        height: auto;
+        overflow: auto;
+        background: #efefef;
         .content{
-            min-height: calc(100% - 90px);
-            width: 100%;
+            min-height: calc(100% - 80px);
             background: #fff;
-            box-sizing: content-box;
-            padding: 20px;
+            box-sizing: border-box;
+            margin: 20px;
         }
         footer{
-            bottom: 0;
-            position: relative;
-            height:50px;
+            height:40px;
             width: 100%;
-            background: rgb(234, 236, 243);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:#999;
+            font-size: 12px;
         }
     }
 }

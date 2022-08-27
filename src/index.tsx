@@ -1,9 +1,12 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import ErrorBoundary from '@components/ErrorBoundary';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ErrorBoundary from '@components/ErrorBoundary';
+import 'antd/dist/antd.min.css';
+import './index.css';
+import { Spin } from 'antd';
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -11,7 +14,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ErrorBoundary>
-      <Suspense fallback="loading...">
+      <Suspense fallback={<Spin tip='loading...'/>}>
         <App />
       </Suspense>
     </ErrorBoundary>
