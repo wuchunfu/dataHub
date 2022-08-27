@@ -1,1 +1,3 @@
-export const a = () => {}
+export function name(params:any) {
+  
+}

@@ -1,22 +1,11 @@
-import React, { ReactNode } from 'react';
-import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { routers } from './router/routers';
-
-const App:React.FC = () => {
+import BaseRoutes from "@router/routers";
+import { BrowserRouter } from "react-router-dom";
+const MenuRouter: React.FC = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        {
-          routers.map(item => {
-            return (
-              <Route path={item.path} key={item.key} element={item.element as unknown as ReactNode}/>
-            )
-          })
-        }
-      </Routes>
+      <BaseRoutes />
     </BrowserRouter>
   );
-}
+};
 
-export default App;
+export default MenuRouter;
