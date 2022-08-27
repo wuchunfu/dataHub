@@ -1,3 +1,4 @@
+import { Spin } from "antd"
 import { Suspense } from "react"
 // interface Props {
 //   lazyChildren:React.LazyExoticComponent<React.FC<{}>>
@@ -5,7 +6,7 @@ import { Suspense } from "react"
 
 const SuspenseRoute:React.FC<{lazyChildren:React.LazyExoticComponent<React.FC<{title:string}>>,title:string}> = props => {
   return (
-    <Suspense fallback='loading...'>
+    <Suspense fallback={<Spin tip='loading...'/>}>
       <props.lazyChildren title={props.title}/>
     </Suspense>
   )
