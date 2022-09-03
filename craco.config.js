@@ -1,34 +1,44 @@
-const path = require('path');
+const path = require("path");
+const autoprefixer = require("autoprefixer");
+const pxtorem = require("postcss-pxtorem");
 module.exports = {
   style: {
     postcss: {
-        mode: 'extends',
-        loaderOptions: {
-            postcssOptions: {
-                ident: 'postcss',
-                plugins: [
-                    require('postcss-pxtorem',  {
-                        rootValue: 10, // (Number | Function) 表示根元素字体大小或根据input参数返回根元素字体大小
-                        unitPrecision: 5, // （数字）允许 REM 单位增长到的十进制数字
-                        propList: ['*'], // 可以从 px 更改为 rem 的属性 使用通配符*启用所有属性
-                        selectorBlackList: [],// （数组）要忽略并保留为 px 的选择器。
-                        replace: true, // 替换包含 rems 的规则，而不是添加回退。
-                        mediaQuery: false,  // 允许在媒体查询中转换 px
-                        minPixelValue: 0, // 最小的转化单位
-                        exclude: /node_modules/i // 要忽略并保留为 px 的文件路径
-                    }, )
-                ],
+      mode: "extends",
+      loaderOptions: (postcssLoaderOptions, { env, paths }) => {
+        postcssLoaderOptions.postcssOptions.plugins = [
+          ...postcssLoaderOptions.postcssOptions.plugins,
+          [
+            "autoprefixer",
+            {
+              overrideBrowserslist: [
+                "last 2 version",
+                ">1%",
+                "Android >= 4.0",
+                "iOS >= 7",
+              ],
             },
-        },
+          ],
+          [
+            "postcss-pxtorem",
+            {
+              rootValue:42,
+              unitPrecision: 2, //只转换到两位小数
+              propList: ["*"],
+            },
+          ],
+        ];
+        return postcssLoaderOptions;
+      },
     },
-},
-  webpack:{
-    alias:{
-      '@pages':path.resolve(__dirname,'src/pages'),
-      "@components":path.resolve(__dirname,"src/components"),
-      "@utils":path.resolve(__dirname,"src/utils"),
-      "@router":path.resolve(__dirname,"src/router"),
-      "@assets":path.resolve(__dirname,"src/assets")
-    }
-  }
-}
+  },
+  webpack: {
+    alias: {
+      "@pages": path.resolve(__dirname, "src/pages"),
+      "@components": path.resolve(__dirname, "src/components"),
+      "@utils": path.resolve(__dirname, "src/utils"),
+      "@router": path.resolve(__dirname, "src/router"),
+      "@assets": path.resolve(__dirname, "src/assets"),
+    },
+  },
+};

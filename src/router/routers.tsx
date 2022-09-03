@@ -42,8 +42,8 @@ const BaseRoutes:React.FC = () => {
   const router = [
     {
       element:Login,
-      label:'登录',
-      key:'/login',
+      label:'首页',
+      key:'/',
     },
     ...dataRouter,
     {

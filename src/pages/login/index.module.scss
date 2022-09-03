@@ -1,38 +1,120 @@
-.container{
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  .header {
+    height: 65px;
+    position: relative;
+    background: url(../../assets/images/record_head_bg.png) no-repeat top center;
     width: 100%;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    span {
+      padding-top: 10px;
+      font-size: 28px;
+      text-align: center;
+      color: #00ffff;
+      background-image: -webkit-gradient(
+        linear,
+        0 0,
+        0 bottom,
+        from(#00ffff),
+        to(#7a79ff)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+    }
+  }
+  .main {
+    background: url(../../assets/images/record_body_bg.jpg) no-repeat center;
     height: 100vh;
-    overflow: hidden;
-    .header{
-        height: 87px;
-        position: relative;
-        background: url(../../assets/images/record_head_bg.png) no-repeat top center;
-        width: 100%;
-        background-size:100%;
+    width: 100%;
+    background-size: cover;
+    padding: 20px 60px;
+    .data-publish {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 88px 73px 1fr;
+      grid-template-rows: 50% 50%;
+      position: relative;
+      justify-content: center;
+      .title {
+        position: absolute;
+        display: block;
+        top: -10px;
+        left: 50%;
+        padding: 10px 36px;
+        background: url(../../assets/images/page4_titleBg.png) no-repeat center
+          center / 100%;
+          font-size: 12px;
+          color: #00FFFF;
+          text-align: center;
+      }
+      .label{
+        background: url(../../assets/images/page4_Lbg1.png) no-repeat center center / 100%;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .arrow{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        background: url(../../assets/images/page4_arrow1.png) no-repeat center center / 100%;
+        padding: 5px 10px;
+      }
+      .content{
+        background: url(../../assets/images/cx_page4_boxBg1.png) no-repeat center center / 100%;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 3;
+        grid-column-end: 4;
         display: flex;
-        justify-content: center;
-        span{
-            padding-top: 23px;
-                font-size: 40px;
-                text-align: center;
-                color: #00FFFF;
-                background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#00ffff), to(#7a79ff));
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                font-weight: bold;
-              
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 50px 160px 20px 25px;
+        gap: 35px;
+        .data-box{
+          margin-left: 70px;
+          font-size: 10px;
+          color: #75C9FF;
+          font-weight: bold;
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-around;
+          flex:1;
+          position: relative;
+          padding-bottom: 10px;
         }
-    }
-    .main{
-        background: url(../../assets/images/record_body_bg.jpg) no-repeat center;
-        height: 100vh;
-        width: 100%;
-        background-size: cover;
-        .data-publish{
-            .title{
-                height: 40px;
-                background: url(../../assets/images/page4_titleBg.png) no-repeat center center / cover;
-            }
+        .name{
+          position: absolute;
+          top:5px;
+          left:0;
         }
+        .data-item{
+          width: 60px;
+          padding-top: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 35px;
+          flex-direction:column;
+          white-space:nowrap;
+          background: url(../../assets/images/page4_boxData1.png) no-repeat center center / 100%;
+          span:last-of-type{
+            font-weight: 500;
+          }
+        }
+      }
+      .label, .arrow{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 15px;
+        color: #DEDB01;
+      }
     }
-
+  }
 }

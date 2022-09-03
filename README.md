@@ -24,4 +24,9 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ## 3、线上访问地址
 
-### http://112.74.93.144:3000/data-center
+### http://112.74.93.144:3000/dataHub
+
+
+### 项目配置
+craco 导出react-script配置，从而可修改项目配置
+postcss 转换css单位，px转rem

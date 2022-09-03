@@ -13,6 +13,7 @@
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "antd": "^4.22.8",
+    "autoprefixer": "^10.4.8",
     "lib-flexible": "^0.3.2",
     "postcss-pxtorem": "^6.0.0",
     "react": "^18.2.0",
