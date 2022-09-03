@@ -3,7 +3,6 @@ import  { lazy } from "react"
 import { useRoutes } from "react-router-dom";
 import SuspenseRoute from "./suspenseRoute";
 
-
 const Login = lazy(() => import('@pages/login'));
 const Home = lazy(() => import('@pages/home'));
 const DataCenter = lazy(() => import('@pages/dataCenter'));

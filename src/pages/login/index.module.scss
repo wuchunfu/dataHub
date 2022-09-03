@@ -1,13 +1,38 @@
 .container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     height: 100vh;
-    div{
-        padding: 10px 20px;
-        color:#fff;
-        border: 1px solid #1412a56e;
-        background: #0805a5a1;
+    overflow: hidden;
+    .header{
+        height: 87px;
+        position: relative;
+        background: url(../../assets/images/record_head_bg.png) no-repeat top center;
+        width: 100%;
+        background-size:100%;
+        display: flex;
+        justify-content: center;
+        span{
+            padding-top: 23px;
+                font-size: 40px;
+                text-align: center;
+                color: #00FFFF;
+                background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#00ffff), to(#7a79ff));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-weight: bold;
+              
+        }
     }
+    .main{
+        background: url(../../assets/images/record_body_bg.jpg) no-repeat center;
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+        .data-publish{
+            .title{
+                height: 40px;
+                background: url(../../assets/images/page4_titleBg.png) no-repeat center center / cover;
+            }
+        }
+    }
+
 }
