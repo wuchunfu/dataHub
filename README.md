@@ -1,11 +1,6 @@
-# DASHBOARD FOR ALL DATA PLATFORM
-
-## 1、DataHub数据中台前端
-### 维护AllData社区项目数据中台前端代码
-
-### 感谢@Jancya @meggielulu
-
-## 2、安装部署
+# DataHub数据中台前端
+ 
+## 1、安装部署
 ### npm start
 
 >Runs the app in the development mode.\
@@ -22,11 +17,16 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 >构建项目打包
 
-## 3、线上访问地址
-
+## 2、体验版地址
+ 
 ### http://112.74.93.144:3000/data-center
+### 项目配置
+> craco 导出react-script配置，从而可修改项目配置
+> 
+> postcss 转换css单位，px转rem
 
-## AllData 一站式大数据平台
+
+## 3、AllData 一站式大数据平台
 
 ### 目前正在建设团队，将大力投入发展AllData项目，欢迎大家踊跃参与建设与讨论！
 ### 由于近期购买服务器需要，希望能得到社区的成员捐赠支持
@@ -398,5 +398,4 @@ job-schedule: 任务提交平台
 > 添加AllData社区负责人微信进群
 <img width="503" alt="image" src="https://user-images.githubusercontent.com/20246692/188576131-e14fc227-c352-4eb9-8803-bdd5fbcedc0f.jpg">
 <br/>
-
 
