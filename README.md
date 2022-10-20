@@ -46,7 +46,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 > 4、您将有机会成为AllData极客开发团队成员，获得成就感与价值输出愉悦感
 
 
-### [AllData社区服务器捐赠10-100元](https://user-images.githubusercontent.com/20246692/190121827-62c6bd5c-5b6f-449c-8a5f-f90c4fea9c02.jpg)
+### [AllData社区服务器捐赠50-200元](https://user-images.githubusercontent.com/20246692/190121827-62c6bd5c-5b6f-449c-8a5f-f90c4fea9c02.jpg)
 <br/>
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/20246692/190121827-62c6bd5c-5b6f-449c-8a5f-f90c4fea9c02.jpg">
 
@@ -440,3 +440,4 @@ job-schedule: 任务提交平台
 ### [AllData社区钉钉群](https://user-images.githubusercontent.com/20246692/188576143-f17e4fe1-3155-40a5-a4a6-1aa5cf9590e2.jpg)
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/20246692/188576143-f17e4fe1-3155-40a5-a4a6-1aa5cf9590e2.jpg">
 <br/>
+
